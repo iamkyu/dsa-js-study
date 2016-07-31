@@ -1,0 +1,51 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="list.js"></script>
+
+<script type="text/javascript">
+function Customer(name, movie) {
+    this.name = name;
+    this.movie = movie;
+}
+
+function displayList(list) {
+    for (list.front(); list.currPos() < list.length(); list.next) {
+        if (list.getElement() instanceof Customer) {
+            console.log(list.getElement(["name"] + ", " + list.getElement()["movie"]));
+        } else {
+            console.log(list.getElement());
+        }
+    }
+}
+
+function checkOut(name, movie, filmList, customerList) {
+    if (movieList.contains(movie)) {
+        var customer = new Customer(name, movie);
+        customerList.append(customer);
+        filmList.remove(movie);
+    } else {
+        console.log(movie + " is not available.");
+    }
+}
+
+function createArr(text) {
+    var arr = text.split('\n');
+    for (var i = 0; i < arr.length; ++i) {
+        arr[i] = arr[i];
+    }
+    return arr;
+}
+
+var films = "The Shqwshank Redemption\nThe Godfather\nThe Godfather Part II\nPulp Fiction\nThe Good, the Bad, and the Ugly\n12 Angry Men\nSchindler's List\nThe Dark Knight\nThe Lord of the Rings The Return of the King\nFight Club\nStar Wars Episode V - The Empire Strikes Back\nOne Flew Over the Cuckoo's Nest\nThe Lort of the Rings The Fellowship of the Ring\nInception\nGoodfellas\nStar Wars\nSeven Samurai\nThe Matrix\nForrest Gump\nCity of God";
+
+var movies = createArr(films);
+var movieList = new List();
+var customers = new List();
+for (var i=0;  movies.length; i++) {
+	movieList.append = movies[i];
+}
+checkOut("Jane Doe", "The Godfather", movieList, customers);
+console.log("\nCustomer Rentals: ");
+displayList(customer);
+console.log("\nMovies Now Available: ");
+displayList(movieList);
+</script>

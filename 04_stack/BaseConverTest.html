@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	
+<script src="stack.js"></script>
+
+<script type="text/javascript">
+function mulBase(num, base) {
+	var stack = new Stack();
+	do {
+		stack.push(num % base);
+		num = Math.floor(num = num / base);
+	} while (num>0);
+
+	var converted = "";
+	while (stack.length() > 0) {
+		converted += stack.pop();
+	}
+
+	return converted;
+}
+
+var num = 32;
+var base = 2;
+var binaryNum = mulBase(num, base);
+console.log(num + " Converted to base " + base + " is " + binaryNum);
+
+num = 125;
+base = 8;
+var octaNum = mulBase(num, base);
+console.log(num + " Converted to base " + base + " is " + octaNum);
+
+</script>

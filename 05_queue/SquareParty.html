@@ -1,0 +1,53 @@
+<script src="Queue.js"></script>
+
+<script type="text/javascript">
+	var dancertxt = "F Allison McMillan\nM Frank Opitz\nM Mason McMillan\nM Clayton Ruff\nF Cheryl Ferenback\nMRaymond Williams\nF Jennifer Ingram\nM Bryan Frazer\nM David Durr\nM Danny Martin\nF Aurora Adney";
+
+	function Dancer(name, sex) {
+		this.name = name;
+		this.sex = sex;
+	}
+
+	function getDancers(males, females) {
+		//var names = read("dancer.txt").split("\n");
+		var names = dancertxt.split("\n"); 
+
+		for (var i=0; i<names.length; ++i) {
+			names[i] = names[i].trim();
+		}
+
+		for (var j=0; j<names.length; ++j) {
+			var dancer = names[j].split(" ");
+			var sex = dancer[0];
+			var name = dancer[1];
+			if (sex == "F") {
+				females.enqueue(new Dancer(name, sex));
+			} else {
+				males.enqueue(new Dancer(name, sex));
+			}
+		}
+	}
+
+	function dance(males, females) {
+		console.log("The dance partenrs are: \n");
+		while (!females.empty() && !males.empty()) {
+			person = females.dequeue();
+			console.log("Female Dancer is: " + person.name);
+			person = males.dequeue();
+			console.log(" and the male dance is: " + person.name);
+		}
+	}
+
+	var maleDancers = new Queue();
+	var femaleDancers = new Queue();
+	getDancers(maleDancers, femaleDancers);
+	dance(maleDancers, femaleDancers);
+	if (femaleDancers.count() > 0) {
+		console.log("There are " + femaleDancers.count() + " female dancers waiting to dance.");
+		//console.log(femaleDancers.front().name + " is waiting to dance.");
+	}
+	if (maleDancers.count() > 0) {
+		console.log("There are " + maleDancers.count() + " male dancers waiting to dance.");
+		//console.log(maleDancers.front().name + " is waiting to dance.");
+	}
+</script>

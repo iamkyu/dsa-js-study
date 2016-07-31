@@ -1,0 +1,61 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="SeqSearch.js"></script>
+
+<script type="text/javascript">
+
+function dispArr(arr) {
+    var printArr = [];
+
+    for (var i=0; i<arr.length; ++i) {
+        printArr.push(arr[i]);
+    }
+    console.log(printArr.join(","));
+}
+
+// 교재의 dispArr 함수 정의
+// function dispArr(arr) {
+//     for (var i=0; i<arr.length; ++i) {
+//         putstr(arr[i] + " ");
+//         if (i%10 == 9) {
+//             putstr("\n");
+//         }
+//     }
+//     if (i%10 != 0) {
+//         putstr("\n");
+//     }
+// }
+
+// test-1
+var nums = [];
+for (var i=0; i<100; ++i) {
+    nums[i] = Math.floor(Math.random() * 101);
+}
+dispArr(nums);
+var num = prompt("Enter a number to search for: ");
+
+if (seqSearch(nums, num)) {
+    console.log(num + " is in the array.");
+} else {
+    console.log(num + " is not in the array.");
+}
+
+// test-2
+num = prompt("Enter a number to search for: ");
+
+var position = seqSearchBoolean(nums, num);
+
+if (position > -1) {
+    console.log(num + " is in the array at position " + position);
+} else {
+    console.log(num + " is not in the array.");
+}
+
+// test -3
+var minValue = findMin(nums);
+console.log("The minimum value is: " + minValue);
+
+// test -4
+var maxValue = findMax(nums);
+console.log("The maximum value is: " + maxValue);
+
+</script>

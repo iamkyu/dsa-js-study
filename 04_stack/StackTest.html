@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	
+<script src="stack.js"></script>
+
+<script type="text/javascript">
+var stack = new Stack();
+stack.push("David");
+stack.push("Silvia");
+stack.push("Bryan");
+console.log("Stack Length: " + stack.length());
+console.log(stack.peek());
+var popped = stack.pop();
+console.log("The Popped Element is " +popped);
+
+stack.push("Cynthia");
+console.log(stack.peek());
+
+stack.clear();
+console.log("After clear() Stack Length: " + stack.length());
+console.log(stack.peek());
+
+stack.push("Clayton");
+console.log(stack.peek());
+
+
+</script>

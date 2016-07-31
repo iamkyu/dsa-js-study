@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="BinarySearch.js"></script>
+
+<script type="text/javascript">
+var nums = [];
+for (var i=0; i<100; ++i) {
+    nums[i] = Math.floor(Math.random() * 101);
+}
+
+insertionsort(nums);
+console.log(nums);
+
+var val = prompt("Enter a value to search for: ");
+var retVal = count(nums, val);
+if (retVal >= 0) {
+    console.log("Found " + retVal + " occurrences of " + val);
+} else {
+    console.log(val + " is not in array.");
+}
+
+
+</script>

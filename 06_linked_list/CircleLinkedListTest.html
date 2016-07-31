@@ -1,0 +1,46 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="CircleLinkedList.js"></script>
+
+<script type="text/javascript">
+// example
+function randomRange(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+
+let linkedList = new CircleLinkedList();
+
+for (var i=0; i<9; ++i) {
+    linkedList.add(randomRange(1, 100));
+}
+linkedList.add(5);
+console.log("====== add(5)");
+linkedList.display(); //head,22,85,53,25,77,94,99,34,67,5
+
+linkedList.remove(5);
+console.log("====== remove(5)");
+linkedList.display(); //head,22,85,53,25,77,94,99,34,67
+
+linkedList.advance(2);
+console.log("====== advance(2)");
+linkedList.display(); //head,22,67,85,53,25,77,94,99,34
+
+linkedList.add(5);
+console.log("====== add(5)");
+linkedList.display(); //head,22,85,53,25,77,94,99,34,67,5
+
+linkedList.advance(2);
+console.log("====== advance(2)");
+linkedList.display(); //head,22,34,67,85,53,25,77,94,99
+
+linkedList.back(3);
+console.log("====== back(3)");
+linkedList.display(); //head,22,34,67,85,53,25,99,77,94
+
+linkedList.add(1);
+console.log("====== add(1)");
+linkedList.display(); //head,22,85,53,25,77,94,99,34,67,5
+
+linkedList.back(2);
+console.log("====== back(2)");
+linkedList.display(); //head,22,34,67,85,53,25,94,99,77
+</script>

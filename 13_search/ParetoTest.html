@@ -1,0 +1,49 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Pareto.js"></script>
+
+<script type="text/javascript">
+
+function dispArr(arr) {
+    var printArr = [];
+
+    for (var i=0; i<arr.length; ++i) {
+        printArr.push(arr[i]);
+    }
+    console.log(printArr.join(","));
+}
+
+// test-1
+var numbers = [5, 1, 7, 4, 2, 10, ,9, 3, 6, 8];
+// console.log(numbers.join(","));
+
+// for (var i=1; i<=3; i++) {
+//     seqSearch(numbers, 4);
+//     console.log(numbers.join(","));
+// }
+
+// 출력결과 예
+// 5,1,7,4,2,10,,9,3,6,8
+// Fount element: 6
+// 6,1,7,4,2,10,,9,3,5,8
+// 
+// 검색한 데이터가 데이터 집합의 앞부분에 위치할 때
+// 5,1,7,4,2,10,,9,3,6,8
+// Fount element: 1
+// 5,1,7,4,2,10,,9,3,6,8
+
+// test-2
+// var nums = [];
+// for (var i=0; i<10; ++i) {
+//     nums[i] = Math.floor(Math.random() * 11);
+// }
+// dispArr(nums);
+var num = prompt("Enter a number to search for: ");
+
+if (betterSeqSearch(numbers, num)) {
+    console.log("Fount element: ");
+    console.log(numbers.join(","));
+} else {
+    console.log(num + " is not in the array.");
+}
+
+</script>

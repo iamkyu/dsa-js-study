@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Dictionary.js"></script>
+
+<script type="text/javascript">
+var pBook = new Dictionary();
+pBook.add("Mike", "123");
+pBook.add("David", "345");
+pBook.add("Cynthia", "456");
+console.log("David's extension " + pBook.find("David"));
+console.log("Number of entries: " + pBook.count());
+pBook.remove("David");
+console.log("Number of entries: " + pBook.count());
+pBook.showAll();
+console.log("===clear");
+pBook.clear();
+console.log("Number of entries: " + pBook.count());
+</script>

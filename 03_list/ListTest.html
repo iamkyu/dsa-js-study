@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	
+<script src="list.js"></script>
+
+<script type="text/javascript">
+	var names = new List();
+	names.append("B");
+	names.append("A");
+	names.append("C");	
+	console.log(names.toString());
+ 	names.front(); console.log("front()");
+	console.log(names.getElement());
+
+	names.next(); console.log("next()");
+	names.next(); console.log("next()");
+	names.prev(); console.log("prev()");
+	console.log(names.getElement());
+</script>

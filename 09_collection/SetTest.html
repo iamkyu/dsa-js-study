@@ -1,0 +1,89 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Set.js"></script>
+
+<script type="text/javascript">
+
+// Set Test
+var names = new Set();
+names.add("David");
+names.add("Jennifer");
+names.add("Cynthia");
+names.add("Mike");
+names.add("Raymond");
+
+if (names.add("Mike")) {
+    console.log("Mike Added");
+} else {
+    console.log("Can't not add Mike, must already be in set.");
+}
+console.log(names.show());
+
+var removed = "Mike";
+if(names.remove(removed)) {
+    console.log(removed + " Removed");
+} else {
+    console.log(removed + " not removed");
+}
+
+
+// Union Test
+var cis = new Set();
+cis.add("Mike");
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Raymond");
+var dmp = new Set();
+dmp.add("Raymond"); 
+dmp.add("Cynthia"); 
+dmp.add("Jonathan"); 
+var it = new Set(); 
+it = cis.union(dmp); 
+console.log(it.show());
+
+// Intersect Test
+var cis = new Set();
+cis.add("Mike");
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Raymond");
+var dmp = new Set();
+dmp.add("Raymond"); 
+dmp.add("Cynthia"); 
+dmp.add("Jonathan"); 
+var it = new Set(); 
+it = cis.intersect(dmp); 
+console.log(it.show());
+
+// Subset Test
+var it = new Set();
+it.add("Cynthia");
+it.add("Clayton");
+it.add("Jennifer");
+it.add("Danny"); it.add("Jonathan");
+it.add("Terrill");
+it.add("Raymond");
+it.add("Mike");
+
+var dmp = new Set();
+dmp.add("Cynthia");
+dmp.add("Raymond");
+dmp.add("Jonathan");
+if (dmp.subset(it)) {
+    console.log("DMP is a subset of IT."); 
+} else {
+    console.log("DMP is not a subset of IT."); 
+}
+
+// Difference Test
+var cis = new Set();
+var it = new Set();
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Danny");
+it.add("Bryan");
+it.add("Clayton");
+it.add("Jennifer");
+var diff = new Set();
+diff = cis.difference(it);
+console.log("[" + cis.show() + "] difference [" + it.show() + "] -> [" + diff.show() + "]");
+</script>

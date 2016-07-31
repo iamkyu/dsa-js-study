@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="ToPostFix.js"></script>
+
+<script type="text/javascript">
+
+let infix = "(1+2)*(3+4)";
+let postfix = toPostFix(infix);
+if (postfix != "12+34+*") {
+    console.log("Test#1 Failed");
+} else {
+    console.log(postfix);
+}
+
+infix = "(A+(B*C))-(D/E)";
+postfix = toPostFix(infix);
+if (postfix != "ABC*+DE/-") {
+    console.log("Test#2 Failed");
+} else {
+    console.log(postfix);
+}
+
+</script>

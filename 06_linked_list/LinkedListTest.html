@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="LinkedList.js"></script>
+
+<script type="text/javascript">
+	var cities = new LinkedList;
+	cities.insert("Conway", "head");
+	cities.insert("Russellville", "Conway");
+	cities.insert("Alma", "Russellville");
+	cities.display();
+
+	console.log("== After Remove ==");
+
+	cities.remove("Russellville");
+	cities.display();
+
+
+</script>

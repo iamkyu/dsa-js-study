@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Hashing.js"></script>
+
+<script type="text/javascript">
+
+var someNames = ["David", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
+var hashTable = new HashTable();
+hashTable.buildChains();
+
+for (var i=0; i< someNames.length; ++i) {
+    hashTable.put(someNames[i]);
+}
+
+hashTable.showDistro();
+
+</script>

@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	
+<script src="stack.js"></script>
+
+<script type="text/javascript">
+ function factorial(n) {
+ 	if (n===0) {
+ 		return 1;
+ 	}
+ 	else {
+ 		return n * factorial(n-1);
+ 	}
+ }
+
+function factorialByStack(n) {
+	var stack = new Stack();
+	while (n>1) {
+		stack.push(n--);
+	}
+
+	var product = 1;
+	while (stack.length()>0) {
+		product *= stack.pop();
+	}
+	return product;
+}
+
+// test	
+console.log(factorial(5));
+console.log(factorialByStack(5));
+</script>
