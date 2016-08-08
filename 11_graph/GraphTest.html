@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Graph.js"></script>
+
+<script type="text/javascript">
+var graph = new Graph(5);
+graph.addEdge(0,1);
+graph.addEdge(0,2);
+graph.addEdge(1,3);
+graph.addEdge(2,4);
+graph.showGraph();
+
+console.log("깊이 우선 탐색: ")
+graph.dfs(0);
+
+
+var graph1 = new Graph(5);
+graph1.addEdge(0,1);
+graph1.addEdge(0,2);
+graph1.addEdge(1,3);
+graph1.addEdge(2,4);
+graph1.showGraph();
+
+console.log("너비 우선 탐색: ")
+graph1.bfs(0);
+</script>
