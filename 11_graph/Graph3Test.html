@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="Graph3.js"></script>
+
+<script type="text/javascript">        
+console.log("========== 깊이 우선 탐색 ==========");
+let graph = new Graph(5);
+graph.addEdge(0,1);
+graph.addEdge(0,2);
+graph.addEdge(1,3);
+graph.addEdge(2,4);
+
+graph.show();
+graph.dfs(0);
+
+console.log("========== 너비 우선 탐색 ==========");
+let graph1 = new Graph(5);
+graph1.addEdge(0,1);
+graph1.addEdge(0,2);
+graph1.addEdge(1,3);
+graph1.addEdge(2,4);
+
+graph1.show();
+graph1.bfs(0);
+
+console.log("========== 최단 경로 탐색 ==========");
+let graph2 = new Graph(5);
+graph2.addEdge(0,1);
+graph2.addEdge(0,2);
+graph2.addEdge(1,3);
+graph2.addEdge(2,4);
+
+graph2.show();
+graph2.pathTo(4);
+</script>

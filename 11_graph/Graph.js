@@ -1,6 +1,6 @@
-function Vertext(label) {
-    this.label = label;
-}
+// function Vertext(label) {
+//     this.label = label;
+// }
 
 function Graph(v) {
     this.vertices = v;
@@ -28,6 +28,8 @@ function addEdge(v, w) {
 
 function showGraph() {
     var str = '';
+
+    console.log(this.adj);
 
     for (var i=0; i<this.vertices; ++i) {
         str += i + ' - > ';
