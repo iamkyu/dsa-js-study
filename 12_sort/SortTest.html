@@ -2,13 +2,32 @@
 <script src="TestBedClass.js"></script>
 <script src="BubbleSort.js"></script>
 <script src="SelectionSort.js"></script>
+<script src="InsertionSort.js"></script>
 
 <script type="text/javascript">
-let myNums = new BubbleSort(10);
-console.log(myNums.toString());
-myNums.bubbleSort();
+let start, end, elapsed;
 
-myNums = new SelectionSort(10);
-console.log(myNums.toString());
+// 버블정렬
+let myNums = new BubbleSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
+myNums.bubbleSort();
+end = new Date().getTime();
+console.log((end-start) + " ms");
+
+// 선택정렬
+myNums = new SelectionSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
 myNums.selectionSort();
+end = new Date().getTime();
+console.log((end-start) + " ms");
+
+// 삽입정
+myNums = new InsertionSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
+myNums.insertionSort();
+end = new Date().getTime();
+console.log((end-start) + " ms");
 </script>

@@ -29,7 +29,7 @@ class SelectionSort {
                 }
             }
             this.swap(outer, smallest);
-            console.log((outer + 1) + "회전: " + this.dataStore.toString());
+            //console.log((outer + 1) + "회전: " + this.dataStore.toString());
         }
     }
 
