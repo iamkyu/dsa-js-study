@@ -3,6 +3,7 @@
 <script src="BubbleSort.js"></script>
 <script src="SelectionSort.js"></script>
 <script src="InsertionSort.js"></script>
+<script src="ShellSort.js"></script>
 
 <script type="text/javascript">
 let start, end, elapsed;
@@ -23,11 +24,19 @@ myNums.selectionSort();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 
-// 삽입정
+// 삽입정렬
 myNums = new InsertionSort(2400);
 //console.log(myNums.toString());
 start = new Date().getTime();
 myNums.insertionSort();
+end = new Date().getTime();
+console.log((end-start) + " ms");
+
+// 셸정렬
+myNums = new ShellSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
+myNums.shellSort();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 </script>
