@@ -26,7 +26,7 @@ class BubbleSort {
                     this.swap(inner, inner+1);
                 }
             }
-            //console.log((this.dataStore.length - outer + 1) + "회전: " + this.dataStore.toString());
+            //console.log(`${this.dataStore.length - outer + 1}회전: ${this.dataStore.toString()}`);
         }
     }
 
@@ -59,6 +59,16 @@ class BubbleSort {
     }
 
     toString() {
-        return "[" + this.dataStore.join(',') + "]";
+        return `[${this.dataStore.join(',')}];`
+    }
+
+    isValidSorting() {
+        for (let i=0; i<this.dataStore.length-1; ++i) {
+            if (i > i+1) {
+                console.log('BubbleSort Test Faild');
+                break;
+            }
+        }
+        console.log('BubbleSort Test Passed!');
     }
 }

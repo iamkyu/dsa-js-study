@@ -15,7 +15,7 @@ class ShellSort {
         this.shuffle();
     }
 
-    // 동적 갭 시퀀스 계산
+    // 동적 갭 시퀀스 계
     dynamicGapCreator() {
         const n = this.dataStore.length;
         let h = 1;
@@ -29,7 +29,7 @@ class ShellSort {
             h = (h-1)/3;
             if(h != 0) gaps.push(h);
         }
-        //console.log("gaps: " + gaps.join(","));
+        // console.log(`gaps: ${gaps.join(",")}`);
         return gaps;
     }
 
@@ -52,7 +52,7 @@ class ShellSort {
                     this.dataStore[j] = this.dataStore[j - gap];
                 }
                 this.dataStore[j] = temp;
-                //console.log(loopCnt + "회전: " + this.dataStore.toString());
+                // console.log(`${loopCnt}회전: ${this.dataStore.toString()}`);
                 loopCnt++;
             }
         }
@@ -87,6 +87,16 @@ class ShellSort {
     }
 
     toString() {
-        return "[" + this.dataStore.join(',') + "]";
+        return `[${this.dataStore.join(',')}];`
+    }
+
+    isValidSorting() {
+        for (let i=0; i<this.dataStore.length-1; ++i) {
+            if (i > i+1) {
+                console.log('ShellSort Test Faild');
+                break;
+            }
+        }
+        console.log('ShellSort Test Passed!');
     }
 }

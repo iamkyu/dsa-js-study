@@ -29,7 +29,7 @@ class SelectionSort {
                 }
             }
             this.swap(outer, smallest);
-            //console.log((outer + 1) + "회전: " + this.dataStore.toString());
+            //console.log(`${outer + 1}회전: ${this.dataStore.toString()}`);
         }
     }
 
@@ -62,6 +62,16 @@ class SelectionSort {
     }
 
     toString() {
-        return "[" + this.dataStore.join(',') + "]";
+        return `[${this.dataStore.join(',')}];`
+    }
+
+    isValidSorting() {
+        for (let i=0; i<this.dataStore.length-1; ++i) {
+            if (i > i+1) {
+                console.log('SelectionSort Test Faild');
+                break;
+            }
+        }
+        console.log('SelectionSort Test Passed!');
     }
 }

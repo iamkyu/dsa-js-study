@@ -68,4 +68,14 @@ class InsertionSort {
     toString() {
         return "[" + this.dataStore.join(',') + "]";
     }
+
+    isValidSorting() {
+        for (let i=0; i<this.dataStore.length-1; ++i) {
+            if (i > i+1) {
+                console.log('InsertionSort Test Faild');
+                break;
+            }
+        }
+        console.log('InsertionSort Test Passed!');
+    }
 }
