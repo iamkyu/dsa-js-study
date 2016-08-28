@@ -4,6 +4,8 @@
 <script src="SelectionSort.js"></script>
 <script src="InsertionSort.js"></script>
 <script src="ShellSort.js"></script>
+<script src="MergeSort.js"></script>
+<script src="QuickSort.js"></script>
 
 <script type="text/javascript">
 let start, end, elapsed;
@@ -13,6 +15,7 @@ let myNums = new BubbleSort(2400);
 //console.log(myNums.toString());
 start = new Date().getTime();
 myNums.bubbleSort();
+myNums.isValidSorting();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 
@@ -21,6 +24,7 @@ myNums = new SelectionSort(2400);
 //console.log(myNums.toString());
 start = new Date().getTime();
 myNums.selectionSort();
+myNums.isValidSorting();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 
@@ -29,6 +33,7 @@ myNums = new InsertionSort(2400);
 //console.log(myNums.toString());
 start = new Date().getTime();
 myNums.insertionSort();
+myNums.isValidSorting();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 
@@ -37,6 +42,27 @@ myNums = new ShellSort(2400);
 //console.log(myNums.toString());
 start = new Date().getTime();
 myNums.shellSort();
+myNums.isValidSorting();
+end = new Date().getTime();
+console.log((end-start) + " ms");
+
+// 병합정렬
+myNums = new MergeSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
+myNums.mergeSort();
+myNums.isValidSorting();
+//console.log(myNums.toString());
+end = new Date().getTime();
+console.log((end-start) + " ms");
+
+// 퀵정렬
+console.log("=============== 퀵정렬 ===============");
+myNums = new QuickSort(2400);
+//console.log(myNums.toString());
+start = new Date().getTime();
+//console.log(`[${myNums.quickSort().join(',')}]`);
+myNums.isValidSorting();
 end = new Date().getTime();
 console.log((end-start) + " ms");
 </script>
