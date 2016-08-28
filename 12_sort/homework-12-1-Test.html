@@ -1,0 +1,59 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="homework-12-1.js"></script>
+
+<script type="text/javascript">
+let start, end, elapsed;
+let obj = {};
+
+// 버블정렬
+let myNums = new Sort(2400);
+obj.name = "BubbleSort";
+
+myNums.initWithNumeric();
+start = new Date().getTime();
+myNums.bubbleSort();
+end = new Date().getTime();
+obj.numsorting = `${end-start}ms`;
+
+myNums.initWithString();
+start = new Date().getTime();
+myNums.bubbleSort();
+end = new Date().getTime();
+obj.strsorting = `${end-start}ms`;
+
+console.log(obj);
+
+// 선택정렬
+myNums = new Sort(2400);
+obj.name = "SelectionSort";
+
+start = new Date().getTime();
+myNums.selectionSort();
+end = new Date().getTime();
+obj.numsorting = `${end-start}ms`;
+
+myNums.initWithString();
+start = new Date().getTime();
+myNums.selectionSort();
+end = new Date().getTime();
+obj.strsorting = `${end-start}ms`;
+
+console.log(obj);
+
+// // 삽입정렬
+myNums = new Sort(2400);
+obj.name = "InsertionSort";
+
+start = new Date().getTime();
+myNums.insertionSort();
+end = new Date().getTime();
+obj.numsorting = `${end-start}ms`;
+
+myNums.initWithString();
+start = new Date().getTime();
+myNums.insertionSort();
+end = new Date().getTime();
+obj.strsorting = `${end-start}ms`;
+
+console.log(obj);
+</script>

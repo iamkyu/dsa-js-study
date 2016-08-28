@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="homework-12-4.js"></script>
+
+<script type="text/javascript">
+let start, end, elapsed;
+let result = [];
+
+// 병합정렬
+myNums = new Sort(10000);
+start = new Date().getTime();
+myNums.mergeSort();
+end = new Date().getTime();
+result.push(`MergeSort: ${(end-start)}ms`);
+
+// 퀵정렬
+console.log("=============== 퀵 정렬 ===============");
+myNums = new Sort(10000);
+start = new Date().getTime();
+myNums.quickSort();
+console.log(`QuickSort: ${myNums.isValidSorting()}`);
+end = new Date().getTime();
+result.push(`QuickSort: ${(end-start)}ms`);
+
+console.log("=============== Result ===============");
+for (let i=0; i<result.length; ++i) {
+    console.log(result[i]);
+}
+</script>
