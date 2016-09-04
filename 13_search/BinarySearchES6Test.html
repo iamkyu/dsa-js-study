@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src="BinarySearchES6.js"></script>
+
+<script type="text/javascript">
+let start, end, elapsed;
+let seqSearch = new Search;
+const SIZE = 10000;
+const SEARCH_DATA = 859;
+seqSearch.init(SIZE);
+
+console.log(`배열크기: ${SIZE}`);
+console.log(`검색데이터: ${SEARCH_DATA}`);
+console.log(seqSearch.dataStore);
+console.log(`======================`);
+
+start = new Date().getTime();
+seqSearch.seqSearch(SEARCH_DATA);
+end = new Date().getTime();
+console.log(`순차탐색: ${(end-start)}ms`);
+
+start = new Date().getTime();
+seqSearch.binSearch(SEARCH_DATA);
+end = new Date().getTime();
+console.log(`삽입정렬 후 이진탐색: ${(end-start)}ms`);
+</script>
